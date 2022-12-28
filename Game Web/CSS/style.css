@@ -1,0 +1,224 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url("/slider_img_bg.png");
+  color: aliceblue;
+}
+
+.left {
+  /* border: 2px solid blue; */
+  display: inline-block;
+  position: absolute;
+  left: 34px;
+  top: 20px;
+}
+
+.middle {
+  /* border: 2px solid green; */
+  width: 33%;
+  margin: 20px auto;
+  display: block;
+  position: sticky;
+  /* position: fixed; */
+}
+
+.right {
+  /* border: 2px solid red; */
+  display: block;
+  position: absolute;
+  right: 34px;
+  /* top: 20px; */
+  top: 15px;
+}
+
+.navbar {
+  display: inline-block;
+  padding: 10px;
+}
+
+.navbar li {
+  color: aliceblue;
+  display: inline-block;
+}
+
+.navbar li a {
+  color: aliceblue;
+  text-decoration: none;
+  padding: 30px 23px;
+  font-size: 20px;
+}
+.navbar li a:hover,
+.navbar li a.active {
+  color: bisque;
+  animation: anim2 500ms cubic-bezier(0.175, 0.885, 0.32, 0.275) infinite;
+  /* text-decoration: underline; */
+}
+@keyframes anim2 {
+  0% {
+    opacity: 1;
+    transform: translateY(px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.left img {
+  width: 87px;
+}
+.right a img{
+  width: 20px;
+  filter: invert(100%);
+}
+.left div {
+  text-align: center;
+}
+.container {
+  /* border: 2px solid white; */
+  margin: 179px 382px;
+  padding: auto;
+  font-size: 60px;
+  line-height: 100px;
+  /* font-family: 'Fira Sans Condensed', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Libre Baskerville', serif; */
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fjalla One", sans-serif;
+  font-family: "Libre Baskerville", serif;
+
+  background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 10s ease-in-out infinite;
+  -moz-animation: animated_text 10s ease-in-out infinite;
+  -webkit-animation: animated_text 10s ease-in-out infinite;
+}
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
+  }
+}
+
+.text2 {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fjalla One", sans-serif;
+  background: #02004a;
+  background: linear-gradient(to left, #02004a 0%, #cf9fc1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Instagaram logo in landing page CSS */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+} */
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
